@@ -24,7 +24,7 @@ export const ItemVideo: React.FunctionComponent<ItemVideoProps> = ({
           src={video.snippet.thumbnails.default.url}
         />
       }
-      title={<a target="_blank" rel="noreferrer" href={`https://youtube.com?v=${video.id.videoId}`}>video.snippet.title</a>}
+      title={<a target="_blank" rel="noreferrer" href={`https://youtube.com?v=${video.id.videoId}`}>{video.snippet.title}</a>}
       description={video.snippet.description}
     />
   </List.Item>
