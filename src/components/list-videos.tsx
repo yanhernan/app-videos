@@ -4,7 +4,7 @@ import { Video, VideosResponse } from "../service/videos-service";
 
 export interface ListVideosProps {
   videosResponse: VideosResponse;
-  onMore: () => void;
+  onMore?: () => void;
   loading?: boolean;
 }
 
@@ -37,7 +37,7 @@ const ListVideos: React.FunctionComponent<ListVideosProps> = ({
 }) => {
   return (
     <List
-      loadMore={<Button onClick={onMore}>More</Button>}
+      loadMore={onMore && <Button onClick={onMore}>More</Button>}
       loading={loading}
       dataSource={videosResponse.items}
       renderItem={(video: Video) => <ItemVideo video={video} />}

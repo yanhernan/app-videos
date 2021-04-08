@@ -41,7 +41,7 @@ const VideoPage = () => {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [videos]);
   useEffect(() => {
     search(query);
   }, [query]);
@@ -49,7 +49,7 @@ const VideoPage = () => {
     <Card>
       <InputSearch onSearch={onSearch} />
       {videos && (
-        <ListVideos loading={loading} videosResponse={videos} onMore={onMore} />
+        <ListVideos loading={loading} videosResponse={videos} onMore={(!!videos.nextPageToken || undefined) && onMore} />
       )}
     </Card>
   );

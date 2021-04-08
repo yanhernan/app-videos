@@ -39,7 +39,6 @@ export const fetchVideos: (
 ) => Promise<Response<VideosResponse>> = async (params = {}) => {
   try {
     let url = `${baseUrl}/videos`;
-    debugger;
     const parameters = new URLSearchParams(Object.keys(params).reduce<Params>((res, c) => {
         if (params[c]) {
             res[c] = params[c];
