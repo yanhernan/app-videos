@@ -18,6 +18,7 @@ export interface Snippet {
 
 export interface Video {
   snippet: Snippet;
+  id: Id;
 }
 
 export interface VideosResponse {
@@ -29,6 +30,11 @@ export interface VideosResponse {
 export interface Response<T> {
   data?: T | Error;
   status: RequestStatus;
+}
+
+export interface Id {
+    kind: string;
+    videoId: string
 }
 
 export interface Params {

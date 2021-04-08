@@ -9,7 +9,7 @@ const InputSearch: React.FunctionComponent<InputSearchProps> = ({ onSearch }) =>
     const search = (query: string) => {
         debounce(() => onSearch(query), 500)();
     }
-    return <Input.Search onSearch={search} />
+    return <Input.Search  onSearch={search} />
 }
 
 
