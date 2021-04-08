@@ -22,8 +22,8 @@ export interface Video {
 
 export interface VideosResponse {
   items: Video[];
-  nextPage?: string;
-  previousPage?: string;
+  nextPageToken?: string;
+  prevPageToken?: string;
 }
 
 export interface Response<T> {

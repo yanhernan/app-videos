@@ -9,7 +9,7 @@ const VideoPage = () => {
   const [videos, setVideos] = useState<VideosResponse | undefined>(undefined);
   const [loading, setLoading] = useState<boolean>(false);
   const onMore = () => {
-    search(query, videos?.nextPage);
+    search(query, videos?.nextPageToken);
   };
   const onSearch = useCallback(
     (query: string) => {
